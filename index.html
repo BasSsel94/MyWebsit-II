@@ -8,6 +8,76 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<!-- Layout Ratio & Watermark Visibility Overrides -->
+<style>
+  /* Enhance background page watermark readability */
+  .page-watermark {
+    color: rgba(255, 255, 255, 0.07) !important; /* Slightly whiter/more visible */
+    pointer-events: none;
+  }
+
+  /* Responsive Fixes for Even Mobile Display Ratios */
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+    .two-col {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+    }
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 12px !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      padding: 0 16px !important;
+    }
+    .nav-links {
+      gap: 8px !important;
+    }
+    .nav-btn {
+      padding: 6px 10px !important;
+      font-size: 12px !important;
+    }
+    .nav-cta {
+      display: none !important; /* Prevents button crowding on tiny screens */
+    }
+    .hero-name {
+      font-size: 38px !important;
+    }
+    .hero-stats {
+      grid-template-columns: 1fr !important;
+      gap: 12px !important;
+    }
+    .contact-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .contact-item {
+      grid-column: span 1 !important;
+    }
+    .skills-grid, .training-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .training-item {
+      grid-column: span 1 !important;
+    }
+    .timeline-item {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+    .timeline-date {
+      text-align: left !important;
+    }
+    .timeline-divider {
+      display: none !important; /* Hides vertical line to save space on mobile */
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -269,7 +339,7 @@
     <div class="training-item scroll-reveal delay-1"><div class="training-code">ISO 22003-1</div><div class="training-name">Food Safety Management System Audit &amp; Certification Requirements</div></div>
     <div class="training-item scroll-reveal"><div class="training-code">ISO/IEC 17034:2016</div><div class="training-name">Competence of Reference Material Producers</div></div>
     <div class="training-item scroll-reveal delay-1"><div class="training-code">ISO 50001</div><div class="training-name">Energy Management Systems &amp; Implementation Principles</div></div>
-    <div class="training-item scroll-reveal" style="grid-column: span 2;"><div class="training-code">ISO 50003</div><div class="training-name">Audit &amp; Certification of Energy Management Systems</div></div>
+    <div class="training-item scroll-reveal" style="grid-column: span 1;"><div class="training-code">ISO 50003</div><div class="training-name">Audit &amp; Certification of Energy Management Systems</div></div>
   </div>
 </div>
 
@@ -280,7 +350,7 @@
     <h2 class="section-title">Technical Skills</h2>
     <div class="section-line"></div>
   </div>
-  <div class="two-col" style="grid-template-columns: repeat(3, 1fr); gap: 24px;">
+  <div class="two-col style-skills-fix">
     <div class="scroll-reveal">
       <div class="lang-heading">Programming</div>
       <div class="lang-item"><span class="lang-name">Python</span></div>
@@ -308,7 +378,7 @@
     <h2 class="section-title">Notable Projects</h2>
     <div class="section-line"></div>
   </div>
-  <div class="skills-grid" style="grid-template-columns: repeat(3, 1fr); background: transparent; gap: 20px; overflow: visible;">
+  <div class="skills-grid style-projects-fix" style="background: transparent; gap: 20px; overflow: visible;">
     <div class="project-card scroll-reveal">
       <div class="project-name">UR20 Robotic Arm Automation</div>
       <p class="project-desc">Programmed a UR20 robotic arm for automated assembly operations, achieving an 18% improvement in production line efficiency and a significant reduction in worker fatigue.</p>
