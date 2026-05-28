@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Basel Kattae</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Basel<span>.</span></a>
+  <div class="nav-links">
+    <a class="nav-btn" href="index.html">Resume</a>
+    <a class="nav-btn" href="services.html">Services</a>
+    <a class="nav-btn active" href="blog.html">Blog</a>
+  </div>
+  <a class="nav-cta" href="mailto:basel.mech@gmail.com">Get in Touch</a>
+</nav>
+
+<div class="watermark-container">
+  <div class="page-watermark" style="top: 60px;">Insights</div>
+
+  <div class="blog-hero scroll-reveal" style="margin-top: var(--nav-h);">
+    <h1>Knowledge<br>Base &amp; <em>Insights</em></h1>
+    <p>Deep dives into conformity engineering, certification strategies, ISO standards, and real-world compliance experience.</p>
+  </div>
+</div>
+
+<div class="blog-grid">
+  <div class="featured-blog-card scroll-reveal">
+    <div class="featured-tag">Featured Article — Coming Soon</div>
+    <div class="featured-title">The Complete Guide to SABER Certification</div>
+    <div class="featured-desc">Everything manufacturers and importers need to know — from product registration to certificate maintenance. Built from 7 years of hands-on experience.</div>
+    <div class="featured-meta">
+      <span class="publish-badge">Publishing Soon</span>
+      <span class="featured-reading-time">Basel Kattae</span>
+    </div>
+  </div>
+  <div class="blog-card coming-soon scroll-reveal delay-1">
+    <div class="blog-coming-icon">✦</div>
+    <div class="blog-coming-label">Upcoming post</div>
+    <div class="blog-coming-text">ISO 17020 demystified — what it actually means for inspection bodies and auditors in the field.</div>
+  </div>
+</div>
+
+<div class="blog-newsletter scroll-reveal">
+  <div>
+    <div class="newsletter-title">Stay ahead of compliance.</div>
+    <p class="newsletter-sub">Get notified when new articles drop — certification guides, audit strategies, and regulatory updates.</p>
+  </div>
+  <div>
+    <div class="newsletter-heading-mini">Get Notified</div>
+    <div class="newsletter-form">
+      <input class="newsletter-input" type="email" placeholder="your@email.com">
+      <button class="newsletter-submit" onclick="handleSubscribe()">Subscribe</button>
+    </div>
+    <div id="subscribe-msg" class="newsletter-success-msg">✓ You're on the list — articles coming soon!</div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-name">Basel<span>.</span></div>
+  <div class="footer-copy">© 2026 Basel Kattae — All rights reserved</div>
+</footer>
+
+<script>
+  function handleSubscribe() {
+    const input = document.querySelector('.newsletter-input');
+    const msg = document.getElementById('subscribe-msg');
+    if (input.value.includes('@')) {
+      msg.style.display = 'block';
+      input.value = '';
+      setTimeout(() => msg.style.display = 'none', 4000);
+    }
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.05, rootMargin: "0px 0px -50px 0px" });
+
+  document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
