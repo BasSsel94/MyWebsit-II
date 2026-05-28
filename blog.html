@@ -138,7 +138,7 @@
       font-size: 42px !important;
     }
     .blog-grid {
-      grid-template-columns: 1fr 1fr !important;
+      grid-template-columns: 1fr !important;
       gap: 24px !important;
     }
   }
@@ -227,7 +227,7 @@
 <!-- POP-UP MODAL FRAMEWORK -->
 <div id="blogModal" class="blog-modal" onclick="closeModal(event)">
   <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="modal-close" onclick="closeModal(force=true)">&times;</button>
+    <button class="modal-close" onclick="closeModal(event, true)">&times;</button>
     <div id="modalTag" class="modal-tag"></div>
     <h2 id="modalTitle" class="modal-title"></h2>
     <div id="modalBody" class="modal-body"></div>
@@ -315,7 +315,7 @@
   }
 
   function closeModal(event, force = false) {
-    if (force || event.target.id === 'blogModal') {
+    if (force || (event && event.target.id === 'blogModal')) {
       const modal = document.getElementById('blogModal');
       modal.classList.remove('active');
       document.body.style.overflow = ''; // Re-enables background body scrolling
