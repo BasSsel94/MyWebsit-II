@@ -8,6 +8,80 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<!-- Layout Ratio & Watermark Visibility Overrides -->
+<style>
+  /* Enhance background page watermark readability */
+  .page-watermark {
+    color: rgba(255, 255, 255, 0.07) !important; /* Slightly whiter/more visible */
+    pointer-events: none;
+  }
+
+  /* Responsive Fixes for Even Mobile Display Ratios */
+  @media (max-width: 900px) {
+    .services-hero h1 {
+      font-size: 42px !important;
+    }
+    .services-grid {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 20px !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      padding: 0 16px !important;
+    }
+    .nav-links {
+      gap: 8px !important;
+    }
+    .nav-btn {
+      padding: 6px 10px !important;
+      font-size: 12px !important;
+    }
+    .nav-cta {
+      display: none !important; /* Prevents button crowding on tiny screens */
+    }
+    .services-hero {
+      padding: 0 16px !important;
+      text-align: center !important;
+    }
+    .services-hero h1 {
+      font-size: 32px !important;
+    }
+    .category-nav {
+      flex-direction: column !important;
+      gap: 8px !important;
+      padding: 0 16px !important;
+    }
+    .cat-btn {
+      width: 100% !important;
+      text-align: center !important;
+    }
+    .services-section {
+      padding: 40px 16px !important;
+    }
+    .services-section-title {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 12px !important;
+    }
+    .services-grid {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+    .services-cta-strip {
+      flex-direction: column !important;
+      gap: 24px !important;
+      text-align: center !important;
+      padding: 40px 16px !important;
+    }
+    .services-cta-btn {
+      width: 100% !important;
+      text-align: center !important;
+    }
+  }
+</style>
 </head>
 <body>
 
