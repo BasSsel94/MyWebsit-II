@@ -8,6 +8,72 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<!-- Layout Ratio & Watermark Visibility Overrides -->
+<style>
+  /* Enhance background page watermark readability */
+  .page-watermark {
+    color: rgba(255, 255, 255, 0.07) !important; /* Slightly whiter/more visible */
+    pointer-events: none;
+  }
+
+  /* Responsive Fixes for Even Mobile Display Ratios */
+  @media (max-width: 900px) {
+    .blog-hero h1 {
+      font-size: 42px !important;
+    }
+    .blog-grid {
+      grid-template-columns: 1fr !important;
+      gap: 24px !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      padding: 0 16px !important;
+    }
+    .nav-links {
+      gap: 8px !important;
+    }
+    .nav-btn {
+      padding: 6px 10px !important;
+      font-size: 12px !important;
+    }
+    .nav-cta {
+      display: none !important; /* Prevents button crowding on tiny screens */
+    }
+    .blog-hero {
+      padding: 0 16px !important;
+      text-align: center !important;
+    }
+    .blog-hero h1 {
+      font-size: 32px !important;
+    }
+    .blog-grid {
+      padding: 0 16px !important;
+    }
+    .featured-blog-card {
+      padding: 30px 20px !important;
+    }
+    .featured-title {
+      font-size: 24px !important;
+    }
+    .blog-newsletter {
+      flex-direction: column !important;
+      gap: 32px !important;
+      padding: 40px 16px !important;
+      text-align: center !important;
+    }
+    .newsletter-form {
+      flex-direction: column !important;
+      gap: 12px !important;
+    }
+    .newsletter-input, .newsletter-submit {
+      width: 100% !important;
+      border-radius: 4px !important; /* Clean edges when separated vertically */
+    }
+  }
+</style>
 </head>
 <body>
 
