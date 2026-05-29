@@ -1,420 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Basel Kattae — Senior Conformity Engineer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
-<!-- Layout Ratio & Watermark Visibility Overrides -->
-<style>
-  /* Enhance background page watermark readability */
-  .page-watermark {
-    color: rgba(255, 255, 255, 0.07) !important; /* Slightly whiter/more visible */
-    pointer-events: none;
-  }
-
-  /* Responsive Fixes for Even Mobile Display Ratios */
-  @media (max-width: 900px) {
-    .hero {
-      grid-template-columns: 1fr !important;
-      gap: 40px !important;
-    }
-    .two-col {
-      grid-template-columns: 1fr !important;
-      gap: 32px !important;
-    }
-    .skills-grid {
-      grid-template-columns: repeat(2, 1fr) !important;
-      gap: 12px !important;
-    }
-  }
-
-  @media (max-width: 600px) {
-    nav {
-      padding: 0 16px !important;
-    }
-    .nav-links {
-      gap: 8px !important;
-    }
-    .nav-btn {
-      padding: 6px 10px !important;
-      font-size: 12px !important;
-    }
-    .nav-cta {
-      display: none !important; /* Prevents button crowding on tiny screens */
-    }
-    .hero-name {
-      font-size: 38px !important;
-    }
-    .hero-stats {
-      grid-template-columns: 1fr !important;
-      gap: 12px !important;
-    }
-    .contact-grid {
-      grid-template-columns: 1fr !important;
-    }
-    .contact-item {
-      grid-column: span 1 !important;
-    }
-    .skills-grid, .training-grid {
-      grid-template-columns: 1fr !important;
-    }
-    .training-item {
-      grid-column: span 1 !important;
-    }
-    .timeline-item {
-      grid-template-columns: 1fr !important;
-      gap: 16px !important;
-    }
-    .timeline-date {
-      text-align: left !important;
-    }
-    .timeline-divider {
-      display: none !important; /* Hides vertical line to save space on mobile */
-    }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basel Kattae | CV & Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a class="nav-logo" href="index.html">Basel<span>.</span></a>
-  <div class="nav-links">
-    <a class="nav-btn active" href="index.html">Resume</a>
-    <a class="nav-btn" href="services.html">Services</a>
-    <a class="nav-btn" href="blog.html">Blog</a>
-  </div>
-  <a class="nav-cta" href="mailto:basel.mech@gmail.com">Get in Touch</a>
-</nav>
-
-<!-- MARQUEE -->
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    <span>PMP® Certified</span><span>PMI-RMP® Certified</span><span>ISO 9001 Lead Auditor</span>
-    <span>SASO Accredited</span><span>ISO 17020 Inspector</span><span>7+ Years Experience</span>
-    <span>2,000+ Certificates Issued</span><span>SABER Expert</span><span>G-Mark Certification</span>
-    <span>PMP® Certified</span><span>PMI-RMP® Certified</span><span>ISO 9001 Lead Auditor</span>
-  </div>
-</div>
-
-<div class="watermark-container">
-  <!-- FADED BACKGROUND WATERMARK -->
-  <div class="page-watermark">Resume</div>
-
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-left scroll-reveal">
-      <div class="hero-tag">Senior Engineer &amp; Team Lead</div>
-      <h1 class="hero-name">Basel <em>Kattae</em></h1>
-      <p class="hero-title">Conformity Engineering — Certification — Risk Management</p>
-      <p class="hero-summary">
-        SASO-accredited Senior Conformity Engineer and Team Lead with 7+ years of experience in product certification, compliance assessment, and quality management across UAE and KSA markets. ISO 9001 Certified Lead Auditor, PMP®, and PMI-RMP® professional blending a Mechatronics Engineering background with thousands of successfully issued market clearances.
-      </p>
-      <div class="hero-stats">
-        <div class="stat"><div class="stat-num">7+</div><div class="stat-label">Years Exp.</div></div>
-        <div class="stat"><div class="stat-num">2k+</div><div class="stat-label">Certificates</div></div>
-        <div class="stat"><div class="stat-num">3</div><div class="stat-label">Global Certs</div></div>
-      </div>
-    </div>
-    <div class="hero-right scroll-reveal delay-1">
-      <div class="photo-frame">
-        <div class="photo-inner">
-          <img src="Images/Formal Pic.png" alt="Basel Kattae">
-        </div>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-item email-box">
-          <span class="contact-label">Email</span>
-          <span class="contact-val">basel.mech@gmail.com</span>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">Phone</span>
-          <span class="contact-val">+90 507 194 6014</span>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">Location</span>
-          <span class="contact-val">Istanbul, Turkey</span>
-        </div>
-        <div class="contact-item" style="grid-column: span 2;">
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-val">linkedin.com/in/baselkattae</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- COMPETENCIES SECTION -->
-<div class="section scroll-reveal">
-  <div class="section-header">
-    <span class="section-num">01</span>
-    <h2 class="section-title">Core Competencies</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="skills-grid">
-    <div class="skill-item">Conformity Assessment</div>
-    <div class="skill-item">Team Leadership &amp; Mentoring</div>
-    <div class="skill-item">On-site Inspections (ISO 17020)</div>
-    <div class="skill-item">ISO 9001 Lead Auditing</div>
-    <div class="skill-item">Risk Management (PMI-RMP®)</div>
-    <div class="skill-item">Technical Report Verification</div>
-    <div class="skill-item">Product &amp; System Certification</div>
-    <div class="skill-item">Project Management (PMP®)</div>
-    <div class="skill-item">Client &amp; Stakeholder Management</div>
-    <div class="skill-item">Market Entry Strategy</div>
-    <div class="skill-item">3D Modelling &amp; CAD Design</div>
-    <div class="skill-item">Quality &amp; Regulatory Compliance</div>
-  </div>
-</div>
-
-<!-- PROFESSIONAL EXPERIENCE -->
-<div class="section scroll-reveal">
-  <div class="section-header">
-    <span class="section-num">02</span>
-    <h2 class="section-title">Experience</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="timeline">
-    <div class="timeline-item scroll-reveal">
-      <div class="timeline-date">
-        <div class="timeline-date-range">Nov 2021 – Present</div>
-        <div class="timeline-company">RACS Quality Certificates Issuing Services</div>
-        <div class="timeline-location">Dubai, UAE</div>
-      </div>
-      <div class="timeline-divider"><div class="timeline-dot"></div></div>
-      <div class="timeline-content">
-        <div class="timeline-role">Senior Conformity Engineer &amp; Team Lead</div>
-        <ul class="timeline-bullets">
-          <li>Spearheaded development of case studies and market entry models to guide top-management decisions for launching certification services in the Turkish market.</li>
-          <li>Led, mentored, and supervised a team of conformity engineers, delivering technical training and ongoing performance coaching.</li>
-          <li>Issued 2,000+ product and system certificates under various schemes for clients in KSA and UAE.</li>
-          <li>Conducted on-site inspections for international shipments in accordance with ISO 17020 standards.</li>
-          <li>Performed conformity assessments, product registration, and certificate issuance across diverse product categories and international standards.</li>
-          <li>Verified technical reports, laboratory test results, and certification documentation prior to issuance.</li>
-          <li>Built and maintained strong client and consultancy partner relationships, successfully closing high-value deals and driving consistent business growth.</li>
-          <li>Performed quality checks to ensure all certified products fully comply with applicable standards and regional regulations.</li>
+    <nav>
+        <div class="logo"><a href="#">Welcome Stranger</a></div>
+        <ul>
+            <li><a href="index.html" class="active">CV</a></li>
+            <li><a href="services/index.html">Services</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
         </ul>
-      </div>
-    </div>
-    
-    <div class="timeline-item scroll-reveal">
-      <div class="timeline-date">
-        <div class="timeline-date-range">Jul 2021 – Mar 2022</div>
-        <div class="timeline-company">Al Nafoura</div>
-        <div class="timeline-location">Sharjah, UAE</div>
-      </div>
-      <div class="timeline-divider"><div class="timeline-dot"></div></div>
-      <div class="timeline-content">
-        <div class="timeline-role">Administrative Supervisor</div>
-        <ul class="timeline-bullets">
-          <li>Managed end-to-end daily operations of a restaurant and juice shop, maintaining service quality and customer satisfaction standards.</li>
-          <li>Oversaw staff scheduling, task delegation, and performance monitoring to optimize operational efficiency.</li>
-          <li>Coordinated inventory procurement and supplier relationships, reducing waste and ensuring consistent stock levels.</li>
-          <li>Supported onboarding, and training of new team members, contributing to reduced staff turnover.</li>
-        </ul>
-      </div>
-    </div>
+    </nav>
 
-    <div class="timeline-item scroll-reveal">
-      <div class="timeline-date">
-        <div class="timeline-date-range">Jan 2021 – Jul 2021</div>
-        <div class="timeline-company">AmadaTech</div>
-        <div class="timeline-location">Istanbul, Turkey</div>
-      </div>
-      <div class="timeline-divider"><div class="timeline-dot"></div></div>
-      <div class="timeline-content">
-        <div class="timeline-role">Mechatronics Engineer</div>
-        <ul class="timeline-bullets">
-          <li>Utilized SolidWorks and CATIA to design and model elevator and escalator systems for client-specific projects.</li>
-          <li>Engaged directly with clients to capture technical requirements, performance expectations, and customization needs.</li>
-          <li>Promoted engineering services through technical presentations, supporting sales acquisition and client onboarding.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item scroll-reveal">
-      <div class="timeline-date">
-        <div class="timeline-date-range">Nov 2019 – Mar 2020</div>
-        <div class="timeline-company">Siemens Gebze Factory</div>
-        <div class="timeline-location">Istanbul, Turkey</div>
-      </div>
-      <div class="timeline-divider"><div class="timeline-dot"></div></div>
-      <div class="timeline-content">
-        <div class="timeline-role">Mechatronics Engineering Intern</div>
-        <ul class="timeline-bullets">
-          <li>Designed and implemented cost-effective process improvement strategies for manufacturing applications.</li>
-          <li>Programmed routines and operational parameters for multiple robotic systems to enhance production accuracy.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CREDENTIALS & ACADEMICS -->
-<div class="section scroll-reveal">
-  <div class="section-header">
-    <span class="section-num">03</span>
-    <h2 class="section-title">Credentials &amp; Education</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="two-col">
-    <div class="scroll-reveal delay-1">
-      <div class="skills-heading">Certifications</div>
-      <div class="cert-grid" style="grid-template-columns: 1fr; gap: 12px;">
-        <div class="cert-card">
-          <div class="cert-icon">ISO</div>
-          <div>
-            <div class="cert-name">ISO 9001 Lead Auditor</div>
-            <div class="cert-body">Quality Management Systems</div>
-          </div>
+    <main class="container">
+        <!-- Profile Hero Section -->
+        <div class="profile-hero">
+            <!-- Tip: Place your profile picture in your root folder and name it "profile.jpg" -->
+        <img src="Formal Pic.png" alt="Basel Kattae" class="profile-img">
+            <div>
+                <h1>Basel Kattae</h1>
+                <p>Senior Conformity Engineer & Team Lead specializing in product certification, compliance assessment, and quality management across international markets. Merging a Mechatronics Engineering background with structured project and risk management execution.</p>
+            </div>
         </div>
-        <div class="cert-card">
-          <div class="cert-icon">PMP</div>
-          <div>
-            <div class="cert-name">Project Management Professional (PMP)®</div>
-            <div class="cert-body">Project Management Institute</div>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-icon">RMP</div>
-          <div>
-            <div class="cert-name">Risk Management Professional (PMI-RMP)®</div>
-            <div class="cert-body">Project Management Institute</div>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-icon">ASTM</div>
-          <div>
-            <div class="cert-name">ASTM A615 Standard Specification</div>
-            <div class="cert-body">Deformed &amp; Plain Carbon Steel Bars for Concrete Reinforcement</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="scroll-reveal delay-2">
-      <div class="skills-heading">Education</div>
-      <div class="education-box">
-        <div class="education-tag">Bachelor of Science</div>
-        <div class="education-degree">Mechatronics Engineering</div>
-        <div class="education-school">Bahçeşehir University</div>
-        <div class="education-class">Istanbul, Turkey • Graduated 2019</div>
-      </div>
 
-      <div class="skills-heading" style="margin-top: 36px;">Languages</div>
-      <div class="lang-item">
-        <span class="lang-name">Arabic</span>
-        <span class="lang-level">Native</span>
-      </div>
-      <div class="lang-item">
-        <span class="lang-name">English</span>
-        <span class="lang-level">Fluent</span>
-      </div>
-      <div class="lang-item" style="border-bottom: none;">
-        <span class="lang-name">Turkish</span>
-        <span class="lang-level">Fluent</span>
-      </div>
-    </div>
-  </div>
-</div>
+        <!-- Professional Summary Brief -->
+        <section>
+            <h2>Summary</h2>
+            <p>SASO-accredited professional with a proven track record of issuing 2,000+ product and system certificates, leading high-performing technical engineering teams, and driving regulatory business development. Expert in technical risk analysis, on-site inspections (ISO 17020), and global market entry strategy.</p>
+        </section>
 
-<!-- PROFESSIONAL TRAINING -->
-<div class="section scroll-reveal">
-  <div class="section-header">
-    <span class="section-num">04</span>
-    <h2 class="section-title">Professional Training</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="training-grid">
-    <div class="training-item scroll-reveal"><div class="training-code">ISO/IEC 17020</div><div class="training-name">Inspection Bodies Operations &amp; Impartiality Requirements</div></div>
-    <div class="training-item scroll-reveal delay-1"><div class="training-code">ISO/IEC 17025</div><div class="training-name">Laboratory Competence, Test Reports &amp; Quality Management Systems</div></div>
-    <div class="training-item scroll-reveal"><div class="training-code">ISO/IEC 17065</div><div class="training-name">Certification Body Requirements &amp; Certification Schemes</div></div>
-    <div class="training-item scroll-reveal delay-1"><div class="training-code">ISO/IEC 17021-1</div><div class="training-name">Certification Bodies Requirements</div></div>
-    <div class="training-item scroll-reveal"><div class="training-code">ISO 19011:2018</div><div class="training-name">Audit Process, Risk-Based Auditing &amp; Evidence Evaluation</div></div>
-    <div class="training-item scroll-reveal delay-1"><div class="training-code">ISO 22003-1</div><div class="training-name">Food Safety Management System Audit &amp; Certification Requirements</div></div>
-    <div class="training-item scroll-reveal"><div class="training-code">ISO/IEC 17034:2016</div><div class="training-name">Competence of Reference Material Producers</div></div>
-    <div class="training-item scroll-reveal delay-1"><div class="training-code">ISO 50001</div><div class="training-name">Energy Management Systems &amp; Implementation Principles</div></div>
-    <div class="training-item scroll-reveal" style="grid-column: span 1;"><div class="training-code">ISO 50003</div><div class="training-name">Audit &amp; Certification of Energy Management Systems</div></div>
-  </div>
-</div>
+        <!-- Work Experience -->
+        <section>
+            <h2>Work Experience</h2>
+            
+            <div class="cv-item">
+                <div class="cv-meta">
+                    <span>RACS Quality Certificates Issuing Services | Dubai, UAE</span>
+                    <span>Nov 2021 — Present</span>
+                </div>
+                <div class="cv-title">Senior Conformity Engineer & Team Lead</div>
+                <p>Supervise a team of conformity engineers, delivering technical training and coaching. Manage market entry models for launching certification pathways in the Turkish market, verify technical laboratory test results, perform conformity assessments, and issue over 2,000 product and system certificates under strict regulatory frameworks.</p>
+            </div>
 
-<!-- TECHNICAL SKILLS -->
-<div class="section scroll-reveal">
-  <div class="section-header">
-    <span class="section-num">05</span>
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="two-col style-skills-fix">
-    <div class="scroll-reveal">
-      <div class="lang-heading">Programming</div>
-      <div class="lang-item"><span class="lang-name">Python</span></div>
-      <div class="lang-item" style="border:none;"><span class="lang-name">C programming</span></div>
-    </div>
-    <div class="scroll-reveal delay-1">
-      <div class="lang-heading">CAD &amp; Design</div>
-      <div class="lang-item"><span class="lang-name">SolidWorks</span></div>
-      <div class="lang-item"><span class="lang-name">CATIA</span></div>
-      <div class="lang-item" style="border:none;"><span class="lang-name">AutoCAD</span></div>
-    </div>
-    <div class="scroll-reveal delay-2">
-      <div class="lang-heading">Software Suites</div>
-      <div class="lang-item"><span class="lang-name">Microsoft Office Suite</span></div>
-      <div class="lang-item"><span class="lang-name">Adobe Photoshop</span></div>
-      <div class="lang-item" style="border:none;"><span class="lang-name">Adobe Premiere</span></div>
-    </div>
-  </div>
-</div>
+            <div class="cv-item">
+                <div class="cv-meta">
+                    <span>AmadaTech | Istanbul, Turkey</span>
+                    <span>Jan 2021 — Jul 2021</span>
+                </div>
+                <div class="cv-title">Mechatronics Engineer</div>
+                <p>Utilized SolidWorks and CATIA to design and model elevator and escalator systems. Engaged directly with corporate clients to capture technical requirements and delivered technical presentations to secure and onboard key accounts.</p>
+            </div>
 
-<!-- NOTABLE PROJECTS -->
-<div class="section scroll-reveal" style="border-bottom: none;">
-  <div class="section-header">
-    <span class="section-num">06</span>
-    <h2 class="section-title">Notable Projects</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="skills-grid style-projects-fix" style="background: transparent; gap: 20px; overflow: visible;">
-    <div class="project-card scroll-reveal">
-      <div class="project-name">UR20 Robotic Arm Automation</div>
-      <p class="project-desc">Programmed a UR20 robotic arm for automated assembly operations, achieving an 18% improvement in production line efficiency and a significant reduction in worker fatigue.</p>
-    </div>
-    <div class="project-card scroll-reveal delay-1">
-      <div class="project-name">Smart Mirror</div>
-      <p class="project-desc">Designed and built an interactive mirror using Raspberry Pi and sensors to display personalized real-time information with touch/gesture interaction capabilities.</p>
-    </div>
-    <div class="project-card scroll-reveal delay-2">
-      <div class="project-name">Coin Indicator Machine</div>
-      <p class="project-desc">Developed a microcontroller-based device using sensors and image processing to identify, value, and verify the authenticity of coins.</p>
-    </div>
-  </div>
-</div>
+            <div class="cv-item">
+                <div class="cv-meta">
+                    <span>Siemens Gebze Factory | Istanbul, Turkey</span>
+                    <span>Nov 2019 — Mar 2020</span>
+                </div>
+                <div class="cv-title">Mechatronics Engineering Intern</div>
+                <p>Programmed routines and operational parameters for multiple industrial robotic systems to enhance production accuracy, designing cost-effective manufacturing process improvement strategies.</p>
+            </div>
+        </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-name">Basel<span>.</span></div>
-  <div class="footer-copy">© 2026 Basel Kattae — All rights reserved</div>
-  <div class="footer-links">
-    <a class="footer-link" href="mailto:basel.mech@gmail.com">Email</a>
-    <a class="footer-link" href="https://linkedin.com/in/baselkattae" target="_blank">LinkedIn</a>
-  </div>
-</footer>
+        <!-- Certifications & Credentials -->
+        <section>
+            <h2>Core Credentials</h2>
+            <div class="cv-item">
+                <div class="cv-meta"><span>Project Management Institute</span></div>
+                <div class="cv-title">PMP® & PMI-RMP® Certified</div>
+                <p>Project Management Professional (PMP) and Risk Management Professional (PMI-RMP) credentials utilized to keep complex regulatory, auditing, and operational projects on absolute schedule.</p>
+            </div>
 
-<!-- INTERSECTION OBSERVER SCRIPT FOR ANIMATIONS -->
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.05, rootMargin: "0px 0px -50px 0px" });
+            <div class="cv-item">
+                <div class="cv-meta"><span>Quality Management Systems</span></div>
+                <div class="cv-title">ISO 9001 Certified Lead Auditor</div>
+                <p>Formally trained and certified to lead professional quality assurance, system verification, and conformity assessments.</p>
+            </div>
+        </section>
 
-  document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
-</script>
+        <!-- Notable Engineering Projects -->
+        <section>
+            <h2>Notable Projects</h2>
+            <div class="cv-item">
+                <div class="cv-title">UR20 Robotic Arm Automation</div>
+                <p>Programmed a UR20 robotic arm for automated assembly operations, achieving an 18% improvement in production line efficiency.</p>
+            </div>
+            <div class="cv-item">
+                <div class="cv-title">Smart Mirror Development</div>
+                <p>Designed and engineered an interactive IoT mirror using a Raspberry Pi and sensors to handle real-time touch/gesture interaction.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>Based in Istanbul, Turkey. Open for strategic consultancies, certification framework structuring, or corporate leadership paths.</p>
+            <ul class="contact-list">
+                <li>Email: <a href="mailto:basel.mech@gmail.com">basel.mech@gmail.com</a></li>
+                <li>Phone: <a href="tel:+905071946014">+90 507 194 6014</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/baselkattae" target="_blank">linkedin.com/in/baselkattae</a></li>
+            </ul>
+        </section>
+    </main>
+
 </body>
 </html>
